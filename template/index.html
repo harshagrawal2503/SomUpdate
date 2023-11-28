@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'favicon.html' %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'js/splice.js' %}"></script>
+    <script src="https://cdn.plot.ly/plotly-2.20.0.min.js" charset="utf-8"></script>
+    <title>{{title}}</title>
+</head>
+<body>
+    <nav>
+        <div class="title">
+            biotech
+        </div>
+        <a href="{% url 'logout' %}">Logout</a>
+    </nav>
+    <h1>Hello User!</h1>
+    {% if user.is_authenticated %}
+    {{user.username}} <br>
+    {{user.email}}
+    {% endif %}
+
+
+    <canvas id="myChart"></canvas>
+
+
+
+<!-- <canvas id="myChart"></canvas>
+
+
+
+
+3. Pie Chart using Chart.js library:
+javascript
+<canvas id="myChart"></canvas> -->
+
+
+
+<!-- 5. Area Chart using Plotly.js library:
+```javascript -->
+</body>
+</html>
